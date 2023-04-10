@@ -49,6 +49,7 @@ const connectRelay = async () => {
     }
     if (kind === 1008) {
         const contentObj = JSON.parse(content);
+
       const noteId = nip19.noteEncode(id);
       const contentWithLinks = content.replace(/(https?:\/\/\S+)/gi, (match) => {
         const imgRegex = /\.(jpg|jpeg|png|webp|gif)$/i;
@@ -71,7 +72,7 @@ const connectRelay = async () => {
             <p><b>id:</b>${contentObj.id}</p>
             <p><b>battery_ok:</b>${contentObj.battery_ok}</p>
             <p><b>time:</b>${contentObj.time}</p>
-            <p><b>time:</b>${pubkey}</p>
+            
         </div>
         <ul>
           <a href="https://snort.social/e/${noteId}" target="_blank" rel="noopener noreferrer"><li>View outside</li></a>
