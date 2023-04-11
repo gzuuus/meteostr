@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Meteostr from './components/meteostr';
+import Meteostr from './components/Meteostr';
 
 function App() {
   return (
